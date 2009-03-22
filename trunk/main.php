@@ -1,6 +1,7 @@
 <?
 require_once("inc/config.php");
 
+
 $tem = template_open("main.tpl");
 $tem = template_add_head_foot($tem);
 
