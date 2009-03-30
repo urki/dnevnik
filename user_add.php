@@ -10,8 +10,8 @@ $first = ereg_replace("[^[:alnum:] ]","",$_REQUEST['first']);
 $last = ereg_replace("[^[:alnum:] ]","",$_REQUEST['last']);
 
 
-$sql = "SELECT * FROM roles"; 
 
+$sql = "SELECT * FROM roles"; 
 $result = $db->fetchAll($sql);
 foreach ($result as $res) {
 	$names[] .= $res["name"];
@@ -38,7 +38,7 @@ if ($_REQUEST['add'] == "Dodaj") {
 				'passwd'		 => $password, 
 				'first'      => $first,
 				'last'		=> $last,
-				'id_role'	=> $role_drop
+				'id_role'	=> $role_dropdown
 				); 
 			$db->insert('persons', $data); 
 			$message .= "Uporabnik dodan..";
