@@ -25,6 +25,6 @@ if ($auth->hasIdentity()) {
 		
 }
 
-$BASE_DIR="/Users/samogabrovec/Sites/uros";
+$BASE_DIR="D:\uros\Programiranje\DnevnikZaposlenih";
 $TEMPLATE_DIR=$BASE_DIR."/templates/";
 ?>
