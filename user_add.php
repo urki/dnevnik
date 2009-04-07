@@ -21,10 +21,11 @@ foreach ($result as $res) {
 $role_dropdown = html_drop_down_arrays("role_drop",$names,$values,""); 
 
 
+
 if ($_REQUEST['add'] == "Dodaj") {
 	//echo $username."-".$password."-".$first."-".$last."-".$role_drop;
 	if ($username and $password and $first and $last) {
-		//pogledamo kaj imamo in ce je ze tak notr slucajn..        
+		//pogledamo kaj imamo in ce je ze tak notr slucajn...       
 		$sql = "SELECT first FROM persons where first='$first' and last='$last'"; 
 
 		$result = $db->fetchOne($sql); 
@@ -32,13 +33,13 @@ if ($_REQUEST['add'] == "Dodaj") {
 		if ( $result ) {
 			$message.="Uporabnik ze obstaja";
 		} else {
-			//dejansko vnesemo 
+			// dejansko vnesemo 
 			$data = array( 
 				'username'      => $username, 
 				'passwd'		 => $password, 
 				'first'      => $first,
 				'last'		=> $last,
-				'id_role'	=> $role_dropdown
+				'id_role'	=> $role_drop
 				); 
 			$db->insert('persons', $data); 
 			$message .= "Uporabnik dodan..";

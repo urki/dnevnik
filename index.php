@@ -39,7 +39,7 @@ if ($_REQUEST['add'] == "Dodaj") {
 	$start_time = mktime ($HOUR_START, $MIN_START, 0, date("n",time()) , date("j",time()) , $year= date("Y",time()));
 	$stop_time = mktime ($HOUR_STOP, $MIN_STOP, 0, date("n",time()) , date("j",time()) , $year= date("Y",time()));
 
-	if ($name_drop and $job_drop and $start_time and $stop_time) {
+	if ($name_dropdown and $job_dropdown and $start_time and $stop_time) {
 		$sql = "SELECT timestamp FROM log  where person_id = '$name_drop' and start='$start_time' and end='$stop_time'"; 
 		$result = $db->fetchOne($sql);
 		if (!$result) {
